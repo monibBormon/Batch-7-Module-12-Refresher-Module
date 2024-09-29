@@ -1,0 +1,107 @@
+/* Example 1  */
+.anim2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: boxAnimation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  /* animation-delay: 10s; */
+}
+@keyframes boxAnimation {
+  /* from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+    border-radius: 100%;
+    margin-left: 50px;
+  } */
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+    margin-left: 50px;
+    border-radius: 50%;
+  }
+  50% {
+    background-color: blue;
+    margin-left: 0px;
+    border-radius: 100%;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+/* Example 2  */
+.ball {
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* animation-name: pulse;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; */
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.1;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Example 3 */
+#image {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  position: relative;
+  animation: borderAnimation 5s ease-out 2s infinite;
+}
+@keyframes borderAnimation {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 500px;
+    top: 0px;
+  }
+  50% {
+    left: 500px;
+    top: 300px;
+  }
+  75% {
+    left: 0px;
+    top: 300px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+/* 2  */
